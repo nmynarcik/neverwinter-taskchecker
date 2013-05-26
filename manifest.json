@@ -1,0 +1,35 @@
+{
+ "name": "Neverwinter TaskChecker",
+ "version": "1.1",
+ "manifest_version": 2,
+ "description": "Task Monitor for Neverwinter Professions section of the online gateway.",
+ "options_page": "inc/options.html",
+  "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+      },
+ "permissions": [
+    "notifications",
+    "tabs",
+    "http://gateway.playneverwinter.com/*"
+ ],
+ "browser_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Neverwinter TaskChecker"
+  },
+ "background": {
+    "scripts": ["js/events.js"],
+    "persistent": false
+  },
+ "content_scripts": [
+   {
+    "matches": ["http://gateway.playneverwinter.com/*"],
+    "js": ["js/nw-taskchecker.js"],
+    "run_at": "document_idle"
+   }
+ ]
+}
