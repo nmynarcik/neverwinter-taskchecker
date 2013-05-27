@@ -16,9 +16,9 @@ function init(){
         updateSettings();
         sendMessage(profImg,'NeverWinter', 'TaskChecker Initiated', 'load');
         checkTasks();
-        setInterval(function(){
-            keepAlive();
-        },timeoutKeepAlive);
+        // setInterval(function(){
+        //     keepAlive();
+        // },timeoutKeepAlive);
         // setInterval(function(){checkTasks();}, timeout);
 }
 
